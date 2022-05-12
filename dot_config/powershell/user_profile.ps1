@@ -7,7 +7,7 @@ Import-Module PSReadline
 
 # Load Prompt Config
 function Get-ScriptDirectory { Split-Path $MyInvocation.ScriptName }
-$PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'swarabRaul.omp.json'
+$PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'swarabRaul_V2.omp.json'
 oh-my-posh --init --shell pwsh --config $PROMPT_CONFIG | Invoke-Expression 
 
 # Icons

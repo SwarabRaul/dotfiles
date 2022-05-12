@@ -27,7 +27,7 @@
           "foreground": "#E4E4E4",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "style": "agnoster_short"
+            "style": "full"
           },
           "style": "powerline",
           "template": " {{ .Path }} ",
@@ -61,15 +61,15 @@
         {
           "background": "#303030",
           "foreground": "#3C873A",
-          "leading_diamond": "\ue0b6",
+          "leading_diamond": " \ue0b6",
           "properties": {
             "fetch_package_manager": true,
             "npm_icon": " <#cc3a3a>\ue5fa</> ",
             "yarn_icon": " <#348cba>\uf61a</>"
           },
           "style": "diamond",
-          "template": "\ue718 {{ if .PackageManagerIcon }}{{ end }}{{ .Full }}{{ .PackageManagerIcon }}",
-          "trailing_diamond": "\ue0b4 ",
+          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4",
           "type": "node"
         },
         {
@@ -78,7 +78,7 @@
           "invert_powerline": true,
           "leading_diamond": " \ue0b6",
           "style": "diamond",
-          "template": "\uf5ef {{ .CurrentDate | date .Format }}",
+          "template": " \uf5ef {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b4",
           "type": "time"
         }
@@ -104,7 +104,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\u276f{{ if gt .Code 0 }}{{ else }}{{ end }} ",
+          "template": "\u276f ",
           "type": "exit"
         }
       ],
